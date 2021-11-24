@@ -1,11 +1,10 @@
 package org.firstinspires.ftc.teamcode;
 
-import com.qualcomm.robotcore.eventloop.opmode.OpMode;
-import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
-import com.qualcomm.robotcore.hardware.DcMotor;
+import com.qualcomm.robotcore.eventloop.opmode;
+import com.qualcomm.robotcore.hardware.*;
+
 @TeleOp(name = "test")
-public class testing extends OpMode
-{
+public class testing extends OpMode {
     DcMotor motorRight;
     DcMotor motorLeft;
     DcMotor top;
@@ -15,6 +14,7 @@ public class testing extends OpMode
         motorRight = hardwareMap.dcMotor.get("motorRight");
         motorLeft = hardwareMap.dcMotor.get("motorLeft");
         top = hardwareMap.dcMotor.get("top");
+        telemetry.addData('Status', 'Initialized');
     }
 
     @Override
