@@ -44,6 +44,10 @@ public class DuckDetector extends OpenCvPipeline {
         return duckPosition;
     }
 
+    public int getNumContoursFound(){ // kinda a useless but fun method that returns the amount of contours found (it should be 1)
+        return contoursList.size();
+    }
+
     @Override
     public Mat processFrame(Mat input) {
         //clear the list
